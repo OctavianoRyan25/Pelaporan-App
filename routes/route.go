@@ -10,6 +10,9 @@ import (
 func Init(e *echo.Echo) {
 	e.Use(middleware.Logger())
 
+	// Menggunakan middleware CORS dengan konfigurasi default
+	e.Use(middleware.CORSWithConfig(middleware.DefaultCORSConfig))
+
 	e.Static("/public", "public")
 
 	e.POST("/register", controllers.Register)
