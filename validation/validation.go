@@ -22,6 +22,9 @@ func ValidateReport(report models.Report) error {
 	if report.CatatanLokasi == "" {
 		return errors.New("catatan lokasi is required")
 	}
+	if report.Topik == "" {
+		return errors.New("topik is required")
+	}
 	return nil
 }
 

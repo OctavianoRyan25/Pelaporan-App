@@ -5,6 +5,7 @@ import "time"
 type Report struct {
 	ID            int        `json:"id" gorm:"primary_key"`
 	Nama          string     `json:"nama"`
+	Topik         string     `json:"topik"`
 	NoTelepon     string     `json:"no_telepon"`
 	Aduan         string     `json:"aduan"`
 	Lokasi        string     `json:"lokasi"`
@@ -19,6 +20,7 @@ type Report struct {
 type ReportResponse struct {
 	ID            int             `json:"id" gorm:"primary_key"`
 	Nama          string          `json:"nama"`
+	Topik         string          `json:"topik"`
 	NoTelepon     string          `json:"no_telepon"`
 	Aduan         string          `json:"aduan"`
 	Lokasi        string          `json:"lokasi"`

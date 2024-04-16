@@ -6,7 +6,7 @@ import (
 )
 
 func AutoMigrate() {
-	DB.AutoMigrate(&models.Report{}, &models.Image{}, &models.Status{}, &models.User{}, &models.Camat{})
+	DB.AutoMigrate(&models.Report{}, &models.Image{}, &models.Status{}, &models.User{}, &models.Camat{}, )
 
 	for _, status := range models.DefaultStatuses {
 		var existingStatus models.Status

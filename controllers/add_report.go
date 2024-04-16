@@ -157,6 +157,7 @@ func AddReport(c echo.Context) error {
 	// Binding data report
 	report.StatusID = 1
 	report.Nama = c.FormValue("nama")
+	report.Topik = c.FormValue("topik")
 	report.NoTelepon = c.FormValue("no_telepon")
 	report.Aduan = c.FormValue("aduan")
 	report.Lokasi = c.FormValue("lokasi")
@@ -261,6 +262,7 @@ func AddReport(c echo.Context) error {
 	dataResponse := models.ReportResponse{
 		ID:            report.ID,
 		Nama:          report.Nama,
+		Topik:         report.Topik,
 		NoTelepon:     report.NoTelepon,
 		Aduan:         report.Aduan,
 		Lokasi:        report.Lokasi,
